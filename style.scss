@@ -99,11 +99,11 @@ body {
   background: rgb(250, 251, 255);
 }
 
+//LeftPanel
 .leftMenuWrap {
   position: relative;
   z-index: 1;
   background-color: white;
-  //border: 2px solid red;
   width: 306px;
   height: 1198px;
   padding: 36px 28px;
@@ -198,6 +198,7 @@ body {
   }
 }
 
+//MainPage
 .MainWrap {
   &H1 {
     font-family: PoppinsNormal;
@@ -208,9 +209,10 @@ body {
     padding: 41px 71px 29px 71px;
   }
   &Content {
-    //transform: translateX(-28px);
-    width: 968px;
+    max-width: 968px;
+    width: 100%;
     height: 812px;
+    transform: translateX(-28px);
     border-radius: 30px;
     box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
     background: rgb(255, 255, 255);
@@ -244,11 +246,12 @@ body {
         border-radius: 10px;
         gap: 8px;
         background: rgb(249, 251, 255);
+        color: rgb(0, 0, 0);
         img {
           cursor: pointer;
         }
         input {
-          color: rgb(181, 183, 192);
+          color: rgb(0, 0, 0);
           background-color: transparent;
           font-family: PoppinsNormal;
           font-size: 1.2em;
@@ -390,5 +393,359 @@ body {
         }
       }
     }
+  }
+}
+.burgerMenu {
+  display: none;
+}
+
+//1250px
+@media (max-width: 1250px) {
+  .MainWrap {
+    &H1 {
+      font-family: PoppinsNormal;
+      font-size: 2.4em;
+      font-weight: 500;
+      line-height: 36px;
+      letter-spacing: 0%;
+      padding: 41px 71px 29px 71px;
+    }
+    &Content {
+      max-width: 700px;
+      height: 860px;
+      transform: translateX(0px);
+      border-radius: 0px 30px 30px 0px;
+      &Table {
+        padding: 30px 53px 40px 10px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        thead {
+          border-bottom: 1px solid black;
+        }
+        tbody tr {
+          border-bottom: 1px solid black;
+        }
+        thead th {
+          line-height: 1.3em;
+          text-align: start;
+          padding: 13px 0;
+          color: rgb(181, 183, 192);
+          font-family: PoppinsNormal;
+          font-size: 1.3em;
+          transform: translateX(-2px);
+        }
+        thead th:nth-child(1) {
+          width: 89px;
+        }
+        thead th:nth-child(2) {
+          width: 76px;
+        }
+        thead th:nth-child(3) {
+          width: 123px;
+        }
+        thead th:nth-child(4) {
+          width: 175px;
+        }
+        thead th:nth-child(5) {
+          width: 105px;
+        }
+
+        tbody td {
+          font-size: 1.2em;
+        }
+        tbody td:nth-child(1) {
+          width: 100px;
+        }
+        tbody td:nth-child(2) {
+          width: 80px;
+        }
+        tbody td:nth-child(3) {
+          width: 140px;
+        }
+        tbody td:nth-child(4) {
+          width: 190px;
+        }
+        tbody td:nth-child(5) {
+          width: 100px;
+        }
+      }
+      &Down {
+        padding: 0px 53px 40px 38px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        h3 {
+          color: rgb(181, 183, 192);
+          font-family: PoppinsNormal;
+          font-size: 1.4em;
+          letter-spacing: -1%;
+        }
+        nav {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          li {
+            width: 35px;
+            height: 34px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//1000px
+@media (max-width: 1000px) {
+  .leftMenuWrap {
+    padding: 36px 0px 0 55px;
+    left: 0;
+    position: absolute;
+    background-color: white;
+    width: 330px;
+    height: 1100px;
+    transition: 0.4s;
+    transform: translateX(-330px);
+    &Logo {
+      padding: 10px 3px 0 3px;
+    }
+    &Sec {
+    }
+  }
+  .moveBur {
+    transform: translateX(0px);
+  }
+  .burgerMenu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 50;
+    top: 5px;
+    left: 5px;
+    padding: 3px;
+  }
+  .MainWrap {
+    &H1 {
+      display: flex;
+      justify-content: center;
+    }
+    &Content {
+      border-radius: 30px;
+      padding: 0px;
+      &Head {
+        padding: 30px 0 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &Text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        &Search {
+          margin-top: 25px;
+          padding: 11px;
+          display: flex;
+          width: 80%;
+          input {
+            width: 100%;
+          }
+        }
+      }
+      &Table {
+        padding: 30px 25px 40px 25px;
+        thead {
+          border-bottom: 1px solid black;
+        }
+        tbody tr {
+          border-bottom: 1px solid black;
+        }
+        thead th {
+          line-height: 1.3em;
+          text-align: start;
+          padding: 13px 0;
+          color: rgb(181, 183, 192);
+          font-family: PoppinsNormal;
+          font-size: 1.3em;
+          transform: translateX(-2px);
+        }
+        thead th:nth-child(1) {
+          width: 91px;
+        }
+        thead th:nth-child(2) {
+          width: 76px;
+        }
+        thead th:nth-child(3) {
+          width: 128px;
+        }
+        thead th:nth-child(4) {
+          width: 177px;
+        }
+        thead th:nth-child(5) {
+          width: 109px;
+        }
+
+        tbody td {
+          font-size: 1.2em;
+        }
+        tbody td:nth-child(1) {
+          width: 100px;
+        }
+        tbody td:nth-child(2) {
+          width: 80px;
+        }
+        tbody td:nth-child(3) {
+          width: 140px;
+        }
+        tbody td:nth-child(4) {
+          width: 190px;
+        }
+        tbody td:nth-child(5) {
+          width: 100px;
+        }
+      }
+    }
+  }
+  body {
+    justify-content: center;
+  }
+}
+
+//700px
+@media (max-width: 700px) {
+  .leftMenuWrap {
+  }
+
+  .MainWrap {
+    &H1 {
+      display: flex;
+      justify-content: center;
+    }
+    &Content {
+      overflow-x: scroll;
+      max-width: 480px;
+      &Head {
+        &Text {
+        }
+        &Search {
+          margin-top: 25px;
+          padding: 0px;
+          display: flex;
+          justify-content: start;
+          width: 260px;
+          img {
+            cursor: pointer;
+          }
+          input {
+            width: 100%;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            font-family: PoppinsNormal;
+            font-size: 1.2em;
+            line-height: 18px;
+          }
+        }
+      }
+      &Table {
+        overflow-x: scroll;
+        width: 600px;
+        padding: 30px 25px 40px 25px;
+        thead th {
+          line-height: 1.3em;
+          text-align: start;
+          padding: 13px 0;
+          color: rgb(181, 183, 192);
+          font-family: PoppinsNormal;
+          font-size: 1.2em;
+          transform: translateX(-2px);
+        }
+        thead th:nth-child(1) {
+          width: 107px;
+        }
+        thead th:nth-child(2) {
+          width: 83px;
+        }
+        thead th:nth-child(3) {
+          width: 138px;
+        }
+        thead th:nth-child(4) {
+          width: 187px;
+        }
+        thead th:nth-child(5) {
+          width: 90px;
+        }
+
+        tbody td {
+          font-size: 1.1em;
+        }
+        tbody td:nth-child(1) {
+          width: 125px;
+        }
+        tbody td:nth-child(2) {
+          width: 100px;
+        }
+        tbody td:nth-child(3) {
+          width: 140px;
+        }
+        tbody td:nth-child(4) {
+          width: 190px;
+        }
+        tbody td:nth-child(5) {
+          width: 90px;
+        }
+      }
+    }
+  }
+  body {
+    justify-content: center;
+  }
+}
+
+//500px
+@media (max-width: 500px) {
+  .leftMenuWrap {
+  }
+
+  .MainWrap {
+    &H1 {
+      display: flex;
+      justify-content: center;
+    }
+    &Content {
+      overflow-x: scroll;
+      max-width: 380px;
+      &Head {
+        &Text {
+        }
+        &Search {
+          margin-top: 25px;
+          padding: 0px;
+          display: flex;
+          justify-content: start;
+          width: 260px;
+          img {
+            cursor: pointer;
+          }
+          input {
+            width: 100%;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            font-family: PoppinsNormal;
+            font-size: 1.2em;
+            line-height: 18px;
+          }
+        }
+      }
+      &Table {
+        overflow-x: scroll;
+        width: 600px;
+        padding: 30px 25px 40px 25px;
+      }
+    }
+  }
+  body {
+    justify-content: center;
   }
 }
