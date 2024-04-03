@@ -32,7 +32,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 13px;
+  font-size: 10px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -94,8 +94,16 @@ h6 {
   font-style: normal;
 }
 
+body {
+  display: flex;
+  background: rgb(250, 251, 255);
+}
+
 .leftMenuWrap {
-  border: 2px solid red;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  //border: 2px solid red;
   width: 306px;
   height: 1198px;
   padding: 36px 28px;
@@ -110,7 +118,7 @@ h6 {
       gap: 4px;
       &Name {
         font-family: PoppinsBold, Arial;
-        font-size: 26px;
+        font-size: 2.6em;
         font-weight: 600;
         line-height: 39px;
         letter-spacing: 1%;
@@ -119,7 +127,7 @@ h6 {
       &Ver {
         color: rgb(131, 131, 131);
         font-family: PoppinsNormal;
-        font-size: 10px;
+        font-size: 1em;
         font-weight: 500;
         line-height: 15px;
         letter-spacing: -1%;
@@ -128,33 +136,82 @@ h6 {
       }
     }
   }
-  &Navi {
+  &Sec {
     display: flex;
     flex-direction: column;
-    li {
-      padding: 0 13px;
-      width: 250px;
-      height: 46px;
+    justify-content: space-between;
+    height: 90%;
+    &Navi {
       display: flex;
-      align-items: center;
-      div {
+      flex-direction: column;
+      gap: 16px;
+      li {
+        cursor: pointer;
+        padding: 0 13px;
+        width: 250px;
+        height: 46px;
         display: flex;
         align-items: center;
-        gap: 15px;
+        justify-content: space-between;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          h3 {
+            color: rgb(145, 151, 179);
+            font-family: PoppinsNormal;
+            font-size: 1.4em;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: -1%;
+            text-align: left;
+          }
+        }
+      }
+    }
+    &Navi li:nth-child(3) {
+      border-radius: 8px;
+      background: rgb(89, 50, 234);
+      h3 {
+        color: white;
+      }
+    }
+    &Cab {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         h3 {
-          color: rgb(145, 151, 179);
+          font-family: PoppinsBold;
+          font-size: 1.4em;
+        }
+        h4 {
           font-family: PoppinsNormal;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 21px;
-          letter-spacing: -1%;
-          text-align: left;
+          color: rgb(117, 117, 117);
+          font-size: 1.2em;
         }
       }
     }
   }
-  &Navi li:nth-child(3) {
-    border-radius: 8px;
-    background: rgb(89, 50, 234);
+}
+
+.MainWrap {
+  &H1 {
+    font-family: PoppinsNormal;
+    font-size: 2.4em;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0%;
+    padding: 41px 71px 29px 71px;
+  }
+  &Content {
+    width: 968px;
+    height: 812px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+    background: rgb(255, 255, 255);
   }
 }
